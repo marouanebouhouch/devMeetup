@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer absolute persistent :mini-variant.sync="mini"
-                         v-model="sideNav" overflow >
+                         v-model="sideNav" overflow temporary>
       <v-toolbar class="blue darken-3" dark>
         <v-list class="pa-0 blue darken-2" dark>
           <v-list-tile avatar tag="div">
@@ -49,6 +49,11 @@
     <main>
       <router-view></router-view>
     </main>
+    <v-footer class="blue darken-3 pa-3 white--text">
+      <div>Marouane Bouhouch</div>
+      <v-spacer></v-spacer>
+      <div>© {{ new Date().getFullYear() }}</div>
+    </v-footer>
   </v-app>
 </template>
 
