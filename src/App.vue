@@ -40,7 +40,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only" >
-        <v-btn flat  v-for="item in items" :key="item.title">
+        <v-btn flat  v-for="item in items" :key="item.title" router :to="item.link">
           <v-icon left>{{ item.icon }}</v-icon >
            {{ item.title }}
         </v-btn>
@@ -60,7 +60,7 @@
         items: [
           { title: 'View Meetups', icon: 'remove_red_eye', link: '/meetups' },
           { title: 'Organize Meetup', icon: 'today', link: '/meetup/new' },
-          { title: 'Profile', icon: 'account_circle', link: '/user/profie' },
+          { title: 'Profile', icon: 'account_circle', link: '/user/profile' },
           { title: 'Sign up', icon: 'supervisor_account', link: '/user/signup' },
           { title: 'Sign in', icon: 'lock_open', link: '/user/signin' }
         ],
