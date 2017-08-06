@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer absolute persistent :mini-variant.sync="mini"
-                         v-model="sideNav" overflow>
+                         v-model="sideNav" overflow >
       <v-toolbar class="blue darken-3" dark>
         <v-list class="pa-0 blue darken-2" dark>
           <v-list-tile avatar tag="div">
@@ -21,7 +21,7 @@
       </v-toolbar>
       <v-list class="pt-0" dense>
         <v-divider></v-divider>
-        <v-list-tile v-for="item in items" :key="item.title">
+        <v-list-tile v-for="item in items" :key="item.title" router :to="item.link">
           <v-list-tile-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-tile-action>
@@ -33,7 +33,11 @@
     </v-navigation-drawer>
     <v-toolbar class="blue darken-3" dark>
       <v-toolbar-side-icon @click.native.stop="sideNav = !sideNav" class="hidden-sm-and-up"></v-toolbar-side-icon>
-      <v-toolbar-title>DevMeetups</v-toolbar-title>
+      <v-toolbar-title>
+        <router-link to="/" tag="span" style="cursor: pointer">
+          DevMeetups
+        </router-link>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only" >
         <v-btn flat  v-for="item in items" :key="item.title">
