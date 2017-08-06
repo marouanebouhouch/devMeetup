@@ -54,13 +54,13 @@
       return {
         sideNav: false,
         items: [
-          { title: 'View Meetups', icon: 'remove_red_eye' },
-          { title: 'Organize Meetup', icon: 'today' },
-          { title: 'Profile', icon: 'account_circle' },
-          { title: 'Sign up', icon: 'supervisor_account' },
-          { title: 'Sign in', icon: 'lock_open' }
+          { title: 'View Meetups', icon: 'remove_red_eye', link: '/meetups' },
+          { title: 'Organize Meetup', icon: 'today', link: '/meetup/new' },
+          { title: 'Profile', icon: 'account_circle', link: '/user/profie' },
+          { title: 'Sign up', icon: 'supervisor_account', link: '/user/signup' },
+          { title: 'Sign in', icon: 'lock_open', link: '/user/signin' }
         ],
-        mini: true,
+        mini: false,
         right: null
       }
     }
